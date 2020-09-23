@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-
-  <h1>Це створені пости</h1>
+<a href="/blog/public/home" class="btn btn-primary">Мої статті</a>
+  <h1>Це всі створені статті</h1>
     @if(count($posts) > 0)
       @foreach($posts as $post)
       <div class="card">

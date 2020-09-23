@@ -14,7 +14,26 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    <a href="/blog/public/posts/create" class="btn btn-primary">Створити</a>
+                    <h3>Мої статті:</h3>
+                    @if(count($posts) > 0)
+                      <table class="table table-striped">
+                        <tr>
+                          <th>Назва статті</th>
+                          <th></th>
+                          <th></th>
+                        </tr>
+                        @foreach($posts as $post)
+                        <tr>
+                          <th>{{$post->title}}</th>
+                          <th><a href="/blog/public/posts/{{$post->id}}/edit" class="btn btn-default">Редагувати</th>
+                          <th></th>
+                        </tr>
+                        @endforeach
+                      </table>
+                      @else
+                      <p>Ви ще не створили жодного поста.</p>
+                      @endif
                 </div>
             </div>
         </div>

@@ -7,12 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-  use HasFactory;
+  //use HasFactory;
     //table
-  protected $table = 'posts';
+  //protected $table = 'posts';
   //PK
-  protected $primaryKey = 'id';
+  //protected $primaryKey = 'id';
   //timestamps
-  public $timestamps = false;
+  //public $timestamps = false;
 
+  public function user(){
+    return $this->belongsTo('App\Models\User');
+  }
 }

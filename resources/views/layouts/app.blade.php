@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-inverse shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -31,22 +31,23 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                      <li class="nav-item">
-                        <a class="nav-link" href="/blog/public/posts/create">Створити</a>
-                      </li>
-                    </ul>
+                  <!-- Left Side Of Navbar -->
+                  <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                      <a class="nav-link" href="/blog/public/posts/create">Створити</a>
+                    </li>
+                  </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                  <!-- Right Side Of Navbar -->
+                  <ul class="navbar-nav ml-auto">
+                      <!-- Authentication Links -->
+                    <li class="nav-item">
+                      <a class="nav-link" href="/blog/public/">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="/blog/public/posts">Статті</a>
+                    </li>
                         <!-- Authentication Links -->
-                      <li class="nav-item">
-                        <a class="nav-link" href="/blog/public/">Головна</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="/blog/public/posts">Статті</a>
-                      </li>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -79,8 +80,10 @@
                 </div>
             </div>
         </nav>
-        <div class="py-4 container">
-            @include('inc.messages')
+
+        <div class="container">
+          @include('inc.messages')
+        <main class="py-4">
             @yield('content')
         </main>
     </div>

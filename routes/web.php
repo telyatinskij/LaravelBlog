@@ -16,14 +16,16 @@ use App\Http\Controllers\PostsController;
 */
 Route::view('/', 'pages.index');
 Route::view('/web', 'pages.web');
+
+Route::resource('posts', PostsController::class);
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 //Route::post('/', [PagesController::class, 'index']);
 //Route::view('/post', 'welcome');
 //Route::view('/post', [PagesController::class, 'post']);
 //Route::get('/web', function () {
   //return view ('posts/index');
 //});
-Route::resource('posts', PostsController::class);
-Auth::routes();
-
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
