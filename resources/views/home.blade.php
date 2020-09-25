@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <a href="/blog/public/posts/create" class="btn btn-primary">Створити</a>
+                    <a href="/public/posts/create" class="btn btn-primary">Створити</a>
                     <h3>Мої статті:</h3>
                     @if(count($posts) > 0)
                       <table class="table table-striped">
@@ -26,7 +26,7 @@
                         @foreach($posts as $post)
                         <tr>
                           <th>{{$post->title}}</th>
-                          <th><a href="/blog/public/posts/{{$post->id}}/edit" class="btn btn-default">Редагувати</th>
+                          <th><a href="/public/posts/{{$post->id}}/edit" class="btn btn-default">Редагувати</th>
                           <th></th>
                         </tr>
                         @endforeach

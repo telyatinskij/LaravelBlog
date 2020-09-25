@@ -34,7 +34,7 @@
                   <!-- Left Side Of Navbar -->
                   <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                      <a class="nav-link" href="/blog/public/posts/create">Створити</a>
+                      <a class="nav-link" href="/public/posts/create">Створити</a>
                     </li>
                   </ul>
 
@@ -42,10 +42,10 @@
                   <ul class="navbar-nav ml-auto">
                       <!-- Authentication Links -->
                     <li class="nav-item">
-                      <a class="nav-link" href="/blog/public/">Головна</a>
+                      <a class="nav-link" href="/public/">Головна</a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="/blog/public/posts">Статті</a>
+                      <a class="nav-link" href="/public/posts">Статті</a>
                     </li>
                         <!-- Authentication Links -->
                         @guest
