@@ -1,3 +1,11 @@
+<p align="center">
+    Це мій блог, створений за допомогою фреймворку Laravel 8.
+В даному проекті реалізовано:
+    - створення, редагування, видалення статтей;
+    - авторизація/реєстрація.
+На сторінці сайту "Головна", описано детальну інструкцію.
+</p>
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
